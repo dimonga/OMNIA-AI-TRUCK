@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GameMaster:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GameMaster_jar</output-path>
+    <root id="archive" name="GameMaster.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/resources/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="GameMaster" />
+    </root>
+  </artifact>
+</component>

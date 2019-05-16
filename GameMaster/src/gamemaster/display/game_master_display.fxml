@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox fx:id="container" prefWidth="300" prefHeight="300" spacing="10" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/2.2"
+      fx:controller="gamemaster.display.DisplayController">
+    <style>
+        -fx-padding: 15;
+        -fx-border-style: solid inside;
+        -fx-border-width: 7;
+        -fx-border-radius: 5;
+        -fx-border-color: #32CD32;
+        -fx-background-color: black;
+    </style>
+    <Label fx:id="hintLbl" wrapText="true" style="-fx-text-fill: #32CD32;">
+        <font>
+            <Font name="System Bold" size="50.0"/>
+        </font>
+    </Label>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+    <Label fx:id="timeLbl" wrapText="true" style="-fx-text-fill: #32CD32;">
+        <font>
+            <Font name="System Bold" size="80.0"/>
+        </font>
+    </Label>
+</VBox>

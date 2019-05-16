@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:controller="gamemaster.admin.AdminController" xmlns:fx="http://javafx.com/fxml" alignment="center"
+          hgap="10" vgap="10" prefHeight="800.0" prefWidth="1000.0" maxWidth="Infinity">
+    <style>
+        -fx-padding: 10;
+        -fx-border-style: solid inside;
+        -fx-border-width: 2;
+        -fx-border-insets: 5;
+        -fx-border-radius: 5;
+        -fx-border-color: blue;
+    </style>
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER"/>
+        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER"/>
+    </columnConstraints>
+
+    <!-- Add Header Label -->
+    <Label text="Game Master Admin Panel" GridPane.columnIndex="0"
+           GridPane.rowIndex="0" GridPane.columnSpan="2"
+           GridPane.rowSpan="1">
+        <font>
+            <Font name="Arial" size="24"/>
+        </font>
+        <GridPane.margin>
+            <Insets top="20" bottom="20"/>
+        </GridPane.margin>
+    </Label>
+
+    <Button fx:id="startCountDownTimerButton" onAction="#startCountDownTimer" text="START COUNT DOWN TIMER"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="1"/>
+
+    <Button fx:id="stopCountDownTimerButton" onAction="#stopCountDownTimer" text="PAUSE COUNT DOWN TIMER"
+            maxWidth="Infinity"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="1" disable="true"/>
+
+    <Button fx:id="resetCountDownTimerButton" onAction="#resetCountDownTimer" text="RESET COUNT DOWN TIMER"
+            maxWidth="Infinity"
+            GridPane.columnIndex="2"
+            GridPane.rowIndex="1" disable="true"/>
+
+    <TextField fx:id="hintInputText" maxWidth="Infinity" promptText="Please insert the hint here" prefWidth="200.0"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+    <Button fx:id="hintButton" onAction="#sendHint" text="SEND" maxWidth="Infinity" GridPane.columnIndex="2"
+            GridPane.rowIndex="2"/>
+
+    <Button fx:id="petRobotButton" onAction="#sendPetRobotHint" text="PET ROBOT LEARNING"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="3" GridPane.columnSpan="3"/>
+
+    <Button fx:id="neuralNetworkButton" onAction="#sendNeuralNetworkHint" text="NEURAL NETWORK RIDDLE"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="4" GridPane.columnSpan="3"/>
+
+    <Button fx:id="hint3Button" onAction="#sendThirdPreDefinedHint" text="Olen pelinohjaajanne/I’m your Game Master"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="5" GridPane.columnSpan="3"/>
+
+    <Button fx:id="hint4Button" onAction="#sendFourthPreDefinedHint" text="Mitä laseista näkyy?/What do the glasses show"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="6" GridPane.columnSpan="3"/>
+
+    <Button fx:id="hint5Button" onAction="#sendFifthPreDefinedHint" text="Mitä teksti korostaa?/What does the text highlight?"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="7" GridPane.columnSpan="3"/>
+
+    <Button fx:id="hint6Button" onAction="#sendSixthPreDefinedHint" text="Kynä ja paperi/Paper and pen"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="8" GridPane.columnSpan="3"/>
+
+    <Button fx:id="hint7Button" onAction="#sendSeventhPreDefinedHint" text="Piiri pieni pyörii/Little circle turns"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="9" GridPane.columnSpan="3"/>
+
+    <Button fx:id="hint8Button" onAction="#sendEighthPreDefinedHint" text="Valmiiksi yhdistetyt johdot/ready-connected wires"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="10" GridPane.columnSpan="3"/>
+
+    <Button fx:id="hint9Button" onAction="#sendNinthPreDefinedHint" text="Pyöritä uudelleen/spin again"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="11" GridPane.columnSpan="3"/>
+
+    <Button  onAction="#displayCongratsContent" text="DISPLAY CONGRATS MESSAGE AND PLAY CONGRATS SOUND"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="12"/>
+
+    <Button  onAction="#stopCongratsSound" text="STOP CONGRATS SOUND"
+             maxWidth="Infinity"
+             GridPane.columnIndex="1"
+             GridPane.rowIndex="12" GridPane.columnSpan="2"/>
+
+    <Button  onAction="#clearHint" text="CLEAR HINT"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="13" GridPane.columnSpan="3"/>
+
+    <Button fx:id="displayImageButton" onAction="#displayImage" text="DISPLAY IMAGE" maxWidth="Infinity"
+            GridPane.columnIndex="0" GridPane.columnSpan="2"
+            GridPane.rowIndex="14"/>
+
+    <Button fx:id="hideImageButton" onAction="#hideImage" text="HIDE IMAGE" maxWidth="Infinity" disable="true"
+            GridPane.columnIndex="2"
+            GridPane.rowIndex="14"/>
+
+    <Button fx:id="goFullScreenButton" onAction="#goFullScreen" text="GO FULL SCREEN" maxWidth="Infinity"
+            GridPane.columnIndex="0" GridPane.columnSpan="2"
+            GridPane.rowIndex="15"/>
+
+    <Button fx:id="exitFullScreenButton" onAction="#exitFullScreen" text="EXIT FULL SCREEN" maxWidth="Infinity"
+            disable="true"
+            GridPane.columnIndex="2"
+            GridPane.rowIndex="15"/>
+
+    <Button onAction="#exitApp" text="CLOSE BOTH WINDOWS" maxWidth="Infinity" alignment="CENTER"
+            GridPane.columnSpan="3"
+            GridPane.rowIndex="16"/>
+</GridPane>
