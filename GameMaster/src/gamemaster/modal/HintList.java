@@ -12,6 +12,8 @@ public class HintList {
     public static final int EIGHTH_PRE_DEFINED_TEXT_INDEX = 7;
     public static final int NINTH_PRE_DEFINED_TEXT_INDEX = 8;
     public static final int CONGRATS_TEXT_INDEX = 9;
+    public static final int HOLO_LENS_TEXT_INDEX = 10;
+    public static final int NEURAL_NETWORK_TEXT_INDEX = 11;
 
     private final String[] preDefinedHints = {
             "You see what the pet robot did? It kept running against obstacle, but then it realized that you should stop in front of stop sign to get through - it learned. That’s why robot pet automatically stopped on the next stop sign. This is machine learning: AI learns by knowing it’s current situation and desired outcome and it solves how to complete the action to reach the outcome. \n" +
@@ -29,7 +31,9 @@ public class HintList {
             "Spin again and again until ready.\n" +
                     "Pyöritä uudelleen ja uudelleen, kunnes valmista.",
             "Congratulations, you solved the puzzle!\n" +
-                    "Onnittelut, olet ratkaissut palapelin!"
+                    "Onnittelut, olet ratkaissut palapelin!",
+            "A=5 L=1 G=9 O=6 R=2 I=8 T=3 H=7 M=4",
+            "2-triangle, 3-circle, 2-square, 1-hexagon"
     };
 
     public String[] getPreDefinedHints() {

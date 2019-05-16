@@ -122,6 +122,16 @@ public class AdminController {
     }
 
     @FXML
+    public void sendHoloLensHint() {
+        setPreDefinedHint(HintList.HOLO_LENS_TEXT_INDEX);
+    }
+
+    @FXML
+    public void sendNeuralNetwork2Hint() {
+        setPreDefinedHint(HintList.NEURAL_NETWORK_TEXT_INDEX);
+    }
+
+    @FXML
     public void displayCongratsContent() {
         displayController.displayCongratsContent(hintList.getPreDefinedHints()[HintList.CONGRATS_TEXT_INDEX]);
     }

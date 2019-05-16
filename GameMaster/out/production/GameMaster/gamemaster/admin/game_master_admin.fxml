@@ -99,40 +99,49 @@
             maxWidth="Infinity"
             GridPane.columnIndex="0"
             GridPane.rowIndex="11" GridPane.columnSpan="3"/>
-
-    <Button  onAction="#displayCongratsContent" text="DISPLAY CONGRATS MESSAGE AND PLAY CONGRATS SOUND"
+    <Button fx:id="holoLensButton" onAction="#sendHoloLensHint" text="HOLOLENS HINT"
             maxWidth="Infinity"
             GridPane.columnIndex="0"
-            GridPane.rowIndex="12"/>
+            GridPane.rowIndex="12" GridPane.columnSpan="3"/>
 
-    <Button  onAction="#stopCongratsSound" text="STOP CONGRATS SOUND"
-             maxWidth="Infinity"
-             GridPane.columnIndex="1"
-             GridPane.rowIndex="12" GridPane.columnSpan="2"/>
-
-    <Button  onAction="#clearHint" text="CLEAR HINT"
+    <Button fx:id="neuralNetwork2Button" onAction="#sendNeuralNetwork2Hint" text="Pyöritä uudelleen/spin again"
             maxWidth="Infinity"
             GridPane.columnIndex="0"
             GridPane.rowIndex="13" GridPane.columnSpan="3"/>
 
+    <Button  onAction="#displayCongratsContent" text="DISPLAY CONGRATS MESSAGE AND PLAY CONGRATS SOUND"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="14"/>
+
+    <Button  onAction="#stopCongratsSound" text="STOP CONGRATS SOUND"
+             maxWidth="Infinity"
+             GridPane.columnIndex="1"
+             GridPane.rowIndex="14" GridPane.columnSpan="2"/>
+
+    <Button  onAction="#clearHint" text="CLEAR HINT"
+            maxWidth="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="15" GridPane.columnSpan="3"/>
+
     <Button fx:id="displayImageButton" onAction="#displayImage" text="DISPLAY IMAGE" maxWidth="Infinity"
             GridPane.columnIndex="0" GridPane.columnSpan="2"
-            GridPane.rowIndex="14"/>
+            GridPane.rowIndex="16"/>
 
     <Button fx:id="hideImageButton" onAction="#hideImage" text="HIDE IMAGE" maxWidth="Infinity" disable="true"
             GridPane.columnIndex="2"
-            GridPane.rowIndex="14"/>
+            GridPane.rowIndex="16"/>
 
     <Button fx:id="goFullScreenButton" onAction="#goFullScreen" text="GO FULL SCREEN" maxWidth="Infinity"
             GridPane.columnIndex="0" GridPane.columnSpan="2"
-            GridPane.rowIndex="15"/>
+            GridPane.rowIndex="17"/>
 
     <Button fx:id="exitFullScreenButton" onAction="#exitFullScreen" text="EXIT FULL SCREEN" maxWidth="Infinity"
             disable="true"
             GridPane.columnIndex="2"
-            GridPane.rowIndex="15"/>
+            GridPane.rowIndex="17"/>
 
     <Button onAction="#exitApp" text="CLOSE BOTH WINDOWS" maxWidth="Infinity" alignment="CENTER"
             GridPane.columnSpan="3"
-            GridPane.rowIndex="16"/>
+            GridPane.rowIndex="18"/>
 </GridPane>
