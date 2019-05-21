@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+    <!--Magic Mirror project by Akshay Kore
+    website: www.akor.in
+    blog: https://medium.com/@akshaykore
+    twitter: https://twitter.com/akshaykore
+    facebook: https://www.facebook.com/akshaykore
+    email: akshaykore[at]gmail.com-->
+<head>
+    <meta charset="utf-8">
+    
+    <title>Magic Mirror</title>
+    
+    <!--Meta information-->
+    <meta name="description" content="Magic Mirror by Akshay Kore">
+    <meta name="keywords" content="DIY, Raspberry Pi 3, Magic Mirror, Akshay Kore, Electronics, Hardware, AI, Artificial Intelligence">
+    <meta name="author" content="Akshay Kore">
+    
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+    
+    <!--UI CSS-->
+    <link href="css/ui.css" type="text/css" rel="stylesheet">
+    
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+	<style>
+	#greeting {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: pre; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  
+  animation: 
+    typing 4.5s steps(50, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+	</style>
+</head>
+    
+<body> 
+     <span id="speech"></span>
+    <span id="interim"></span>
+    <!--this is the sound that plays when a question is answered--> 
+    <audio id="magic">
+        <source src="sounds/Magic_Chime.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!--Date and time divs--> 
+    <div id="generalinfo">
+        <div id="time"></div>
+        <div id="date"></div>
+        <div id="weather"></div>        
+    </div>
+
+    <!--Greeting div. This is the one that says "hey sexy!"--> 
+    <div id="greeting" style="font-size:1.2em">You solved the code, well done! nice to meet you. You seem like a talented person.</div>	
+    <script>
+
+      function positiveResponse() {
+        var message="Okay now I’m going to give you instructions; You see the friend robot of professor on top of the drawer?"
+        $('#greeting').fadeOut(5000, function () {
+          $(this).html(message).fadeIn(1000);
+          setTimeout(
+            function() 
+            {
+                var message="it’s broken and the professor’s really sad about it. Can you help fix it so that professor can have his friend back?"
+                  $('#greeting').fadeOut(5000, function () {
+                    $(this).html(message).fadeIn(1000);
+                    setTimeout(
+                      function() 
+                        {
+                          var message="The robot’s brain is made of neural network wires and you should rewire it. I’ll give you instructions on how to start with it."
+                          $('#greeting').fadeOut(10000, function () {
+                            $(this).html(message).fadeIn(1000);
+                            setTimeout(
+                              function() 
+                              {
+                                main();
+                              },
+                            15000);
+                        });
+                      },
+                    15000);
+                  });
+            }, 
+            15000);          
+          });
+
+	         
+
+        
+
+        
+
+        
+      }
+      
+      function negativeResponse() {
+        var message="No: I am afraid you can’t solve the escape room then."
+        $('#greeting').fadeOut(5000, function () {
+          $(this).html(message).fadeIn(1000);
+          main();
+        });
+      }
+  
+	  
+	  
+		//  
+    //     
+    //       
+    //       if(response == "yes") {
+    //         positiveResponse();  
+    //       }
+    //       else if(response == "no"){
+    //         negativeResponse();
+    //       }
+    //       else {
+        
+    //       document.getElementById("greeting").innerHTML = "Answer in yes or no." + response;
+            
+    //       }
+    //     
+        
+	   
+
+     function main() {
+      var message="I have a question for you: would you like to help the professor a little bit - we have a problem with his robot?"
+      $('#greeting').fadeOut(5000, function () {
+        $(this).html(message).fadeIn(1000);
+        setTimeout(
+          function () 
+          {
+            var response = document.getElementById("speech").innerHTML; 
+            //var response = str.includes("yes");
+            if(response.includes("no") == true) {
+              negativeResponse(); 
+            }
+            else if(response.includes("yes") == true) {
+              positiveResponse(); 
+            }
+          } , 10000);   
+      });
+
+      
+     }
+
+     main();
+     
+
+ 
+	</script>
+	<img style="display:none;" src="https://internetofbusiness.com/wp-content/uploads/2018/02/MIT-neural-network-640x435.png">
+    <!--NEVER DELETE THIS. Keep the order constant--> 
+    <div id="answers">
+        <div id="wiki">
+            <div id="wikititle"></div>
+            <div id="wikianswer"></div>
+            <div id="wikisource"></div>
+        </div>
+        <div id="mirror">
+            <div id="mirrorquestion"></div>
+            <div id="mirroranswer"></div>
+        </div>
+    
+    </div>
+    
+    <!--Information for user, keywords to use -->    
+    <div id="footerinfo">
+    Omnia
+    </div>
+  
+    <!--NEVER DELETE THIS. Keep the order constant-->    
+   
+    <script src="js/time.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/wiki.js"></script>
+    <script src="js/wolfram.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/voice.js"></script>  
+</body>	
+<script>
+    function upgrade() {
+      alert('Please use Google Chrome for best experience');
+    }
+
+    window.onload = function() {
+      if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) {
+        upgrade();
+      } else {
+        var recognizing,
+        transcription = document.getElementById('speech'),
+        interim_span = document.getElementById('interim');
+
+        interim_span.style.opacity = '0.5';
+
+
+        function reset() {
+          recognizing = false;
+          interim_span.innerHTML = '';
+          transcription.innerHTML = '';
+          speech.start();
+        }
+
+        var speech = new webkitSpeechRecognition() || speechRecognition();
+
+        speech.continuous = true;
+        speech.interimResults = true;
+        speech.lang = 'en-US'; // check google web speech example source for more lanuages
+        speech.start(); //enables recognition on default
+
+        speech.onstart = function() {
+            // When recognition begins
+            recognizing = true;
+        };
+
+        speech.onresult = function(event) {
+          // When recognition produces result
+          var interim_transcript = '';
+          var final_transcript = '';
+
+          // main for loop for final and interim results
+          for (var i = event.resultIndex; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+              final_transcript += event.results[i][0].transcript;
+            } else {
+              interim_transcript += event.results[i][0].transcript;
+            }
+          }
+          transcription.innerHTML = final_transcript;
+          interim_span.innerHTML = interim_transcript;
+        };
+
+        speech.onerror = function(event) {
+            // Either 'No-speech' or 'Network connection error'
+            console.error(event.error);
+        };
+
+        speech.onend = function() {
+            // When recognition ends
+            reset();
+        };
+
+      }
+    };
+  </script>	  
+</html>
+
+<!--Magic Mirror project by Akshay Kore
+    website: www.akor.in
+    blog: https://medium.com/@akshaykore
+    twitter: https://twitter.com/akshaykore
+    facebook: https://www.facebook.com/akshaykore
+    email: akshaykore[at]gmail.com-->

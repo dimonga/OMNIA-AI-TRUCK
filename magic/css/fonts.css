@@ -1,0 +1,56 @@
+/********************************************************
+
+    Magic Mirror project by Akshay Kore
+
+    website: www.akor.in
+    blog: https://medium.com/@akshaykore
+    twitter: https://twitter.com/akshaykore
+    facebook: https://www.facebook.com/akshaykore
+    email: akshaykore[at]gmail.com
+    
+    Use this to change fonts. Update in the index.html and 
+    ui.css files accordingly. 
+
+*********************************************************/
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Comfortaa/Comfortaa-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../fonts/Comfortaa/Comfortaa-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: thin;
+  font-weight: 100;
+  src: url('../fonts/Comfortaa/Comfortaa-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source-serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source-serif';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../fonts/Source_Serif_Pro/SourceSerifPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source-serif';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Source_Serif_Pro/SourceSerifPro-Semibold.ttf') format('truetype');
+}

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Magic Mirror</title>
+    
+    <!--Meta information-->
+    
+    
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+    
+    <!--UI CSS-->
+    <link href="css/ui.css" type="text/css" rel="stylesheet">
+    
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+	<style>
+	#greeting,#finnish {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: pre; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  
+  animation: 
+    typing 6s steps(40, end),
+    blink-caret .75s step-end infinite;
+  }
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+	</style>
+</head>
+    
+<body> 
+    <span id="speech" style="font-size:2em;position: fixed;top: 85%;width: 94%;font-family: 'Arial';font-weight: 100"></span>
+
+         <span id="interim" style="font-size:2em;position: fixed;top: 85%;width: 94%;font-family: 'Arial';font-weight: 100"></span>
+    <!--this is the sound that plays when a question is answered--> 
+    <audio id="magic">
+        <source src="sounds/Magic_Chime.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!--Date and time divs--> 
+    <div id="generalinfo">
+        <div id="time"></div>
+        <div id="date"></div>
+        <div id="weather"></div>        
+    </div>
+ 
+    <div id="greeting" style="font-size:4em;top: 14%;">Congratulations, you made your way<br>to the third riddle!</div>	
+    <div id="finnish" style="font-size:4em;position: fixed;top: 50%;width: 94%;font-family: 'Arial';font-weight: 100">Onnittelut, selvitit tiesi kolmanteen<br>tehtävään!</div>	
+    
+    <script>
+
+    function main() {
+		setTimeout(
+			  function() 
+			  {
+			  var message="I’m one of the AI built by the Professor.<br>I listen and learn from human interaction. "
+			  var finmessage="Olen yksi professorin luomista tekoälyistä.<br>Kuuntelen ja opin ihmisten<br>vuorovaikutuksesta."
+			  $('#greeting,#finnish').fadeOut(2000, function () {
+				$('#greeting').html(message).fadeIn(1000);
+				$('#finnish').html(finmessage).fadeIn(1000);
+				setTimeout(
+				  function() 
+				  {
+				  var message="The text in the bottom left shows<br>what I’m listening to."
+				  var finmessage="Vasemmassa alareunassa oleva<br>teksti näyttää, mitä kuuntelen."
+				  $('#greeting,#finnish').fadeOut(2000, function () {
+					$('#greeting').html(message).fadeIn(1000);
+					$('#finnish').html(finmessage).fadeIn(1000);
+					  setTimeout(
+					  function() 
+					  {
+					  var message="AI uses Neural Networks to process<br>and connect the information fed to it."
+					  var finmessage="Tekoäly käyttää neuroverkkoja sille<br>syötetyn tiedon käsittelyyn ja yhdistämiseen."
+					  $('#greeting,#finnish').fadeOut(2000, function () {
+						$('#greeting').html(message).fadeIn(1000);
+						$('#finnish').html(finmessage).fadeIn(1000);
+						setTimeout(
+							function() 
+							{
+								var message="Neural Networks work in the same<br>way as human brain, but human<br>brain is far more advanced."
+								var finmessage="Neuroverkot toimivat samalla<br>tavalla kuin ihmisen aivot, mutta<br>ihmisen aivot ovat paljon kehittyneemmät. "  
+								  $('#greeting,#finnish').fadeOut(2000, function () {
+									$('#greeting').html(message).fadeIn(1000);
+									$('#finnish').html(finmessage).fadeIn(1000);
+									setTimeout(
+									  function() 
+										{
+										  var message="In fact, no AI can work without humans."
+										  var finmessage="Ilman ihmistä mikään tekoäly ei<br>toimisikaan."
+										  $('#greeting,#finnish').fadeOut(2000, function () {
+											$('#greeting').html(message).fadeIn(1000);
+											$('#finnish').html(finmessage).fadeIn(1000);
+											setTimeout(
+												function() 
+												  {
+													var message="Do you see the blue robot<br>(Timmy) on the table and the<br>Neural Network wires in the box?"
+													var finmessage="Näetkö pöydällä sinisen Timmy -robotin<br>ja laatikossa olevat neuroverkkojohdot?"
+													$('#greeting,#finnish').fadeOut(2000, function () {
+													  $('#greeting').html(message).fadeIn(1000);
+													  $('#finnish').html(finmessage).fadeIn(1000);
+														setTimeout(
+															function() 
+															  {
+																var message="Your task is to connect the wires<br>correctly so that Timmy’s AI starts working. "
+																var finmessage="Tehtäväsi on yhdistää johdot oikein,<br>jotta Timmy -robotin tekoäly toimii."
+																$('#greeting,#finnish').fadeOut(2000, function () {
+																  $('#greeting').html(message).fadeIn(1000);
+																  $('#finnish').html(finmessage).fadeIn(1000);
+																	setTimeout(
+																		function() 
+																		  {
+																			var message="Connect only the wires on the right,<br>the others are already connected."
+																			var finmessage="Yhdistä vain oikealla olevat johdot,<br>muut ovat jo oikein."
+																			$('#greeting,#finnish').fadeOut(2000, function () {
+																			  $('#greeting').html(message).fadeIn(1000);
+																			  $('#finnish').html(finmessage).fadeIn(1000);									
+																		  });
+																		},
+																	  8000);
+															  });
+															},
+														  16000);
+												  });
+												},
+											  12000);
+										});
+									  },
+									12000);
+								  });
+							}, 
+							8000);   
+					  });
+					  },
+					  8000);
+					});
+					},
+					8000);
+				});
+				},
+				8000);	
+			 }
+
+     main();
+  </script>
+  
+	<img style="display:none;" src="https://internetofbusiness.com/wp-content/uploads/2018/02/MIT-neural-network-640x435.png">
+    <!--NEVER DELETE THIS. Keep the order constant--> 
+    <div id="answers">
+        <div id="wiki">
+            <div id="wikititle"></div>
+            <div id="wikianswer"></div>
+            <div id="wikisource"></div>
+        </div>
+        <div id="mirror">
+            <div id="mirrorquestion"></div>
+            <div id="mirroranswer"></div>
+        </div>
+    
+    </div>
+    
+    <!--Information for user, keywords to use -->    
+    <div id="footerinfo">
+    Omnia
+    </div>
+  
+    <!--NEVER DELETE THIS. Keep the order constant-->    
+   
+    <script src="js/time.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/wiki.js"></script>
+    <script src="js/wolfram.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/voice.js"></script>  
+</body>	
+<script>
+    function upgrade() {
+      alert('Please use Google Chrome for best experience');
+    }
+
+    window.onload = function() {
+      if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) {
+        upgrade();
+      } else {
+        var recognizing,
+        transcription = document.getElementById('speech'),
+        interim_span = document.getElementById('interim');
+
+        interim_span.style.opacity = '0.5';
+
+
+        function reset() {
+          recognizing = false;
+          interim_span.innerHTML = '';
+          transcription.innerHTML = '';
+          speech.start();
+        }
+
+        var speech = new webkitSpeechRecognition() || speechRecognition();
+
+        speech.continuous = true;
+        speech.interimResults = true;
+        speech.lang = 'fi-FI'; // check google web speech example source for more lanuages
+        speech.start(); //enables recognition on default
+
+        speech.onstart = function() {
+            // When recognition begins
+            recognizing = true;
+        };
+
+        speech.onresult = function(event) {
+          // When recognition produces result
+          var interim_transcript = '';
+          var final_transcript = '';
+
+          // main for loop for final and interim results
+          for (var i = event.resultIndex; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+              final_transcript += event.results[i][0].transcript;
+            } else {
+              interim_transcript += event.results[i][0].transcript;
+            }
+          }
+          transcription.innerHTML = final_transcript;
+          interim_span.innerHTML = interim_transcript;
+        };
+
+        speech.onerror = function(event) {
+            // Either 'No-speech' or 'Network connection error'
+            console.error(event.error);
+        };
+
+        speech.onend = function() {
+            // When recognition ends
+            reset();
+        };
+
+      }
+    };
+  </script>	  
+</html>
