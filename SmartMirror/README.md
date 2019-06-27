@@ -1,1 +1,0 @@
-# magicmirror_webapp
