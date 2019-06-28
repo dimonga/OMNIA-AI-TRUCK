@@ -1,16 +1,17 @@
-
+# The AI Truck
 This repo contains details about a project during which we developed and built an AI learning experience inside a truck. 
+## Videos:
+Video Playlist of the truck: https://bit.ly/2KOnyrl
 
-
-
+## Project Details
 The project was part of a 9-month Product Development Project (PdP) course organised by Aalto University in its Design Factory** premises in Finland. 
 The project was initiated by and developed in cooperation with a multisector education provider and regional development centre Omnia with technological support from Microsoft and Lenovo and it was connected to City of Espoo’s Smart and Sustainable City Initiative. 
 The motto of the project was “Everyone should be given the possibility to understand AI”.
 
-Press release of the truck https://www.espoo.fi/en-US/City_of_Espoo/Innovative_Espoo/AI_Truck_helps_Finns_embrace_digital_era(163791)
-
+Press release of the truck: https://bit.ly/2YtqLzK
 Website of the Escape room: https://tekoalyrekka.fi/
 
+## The AI Learning Experience
 The AI learning experience was realized in the form of an Escape Room built inside a truck and it made use of a multitude of different technologies such as HoloLens, Microcontrollers, Raspberry Pi, VR, AR, robotics and more. 
 As the purpose of the project was to educate all diversities of people, having the truck as a platform allowed the learning experience to be made available to all types of people in different locations, and the truck is, in fact, currently touring all around Finland.
 
@@ -36,7 +37,7 @@ The following are the giveaways of this project
     b) Algorithms form the AI - AI is the collection of rules on how to process things.
     c) AI uses Neural Networks to process and connect information fed to it
 
-
+## About the Documentation
 This  folder contains the documentation of the all the codes, designs and instructions to replace the prototypes that were developed
 while building the components of the escape room. 
 If you want to build similar kind of escape room, you may use the documentation and comments in the codes as well the videos provided.
@@ -52,8 +53,6 @@ Once all the riddles are solved by the participants, they enter the next room, b
 This room has basically the setup of VR and a VR riddle, 
 the code for VR scene can be found at 	https://drive.google.com/file/d/1WuCEEXeVgq_qkOBVjH8TLGzUyUM1TBZ6/view?usp=sharing
 
-
-Video Playlist of the truck: https://www.youtube.com/watch?v=wRfFyUCkHQg&list=PLARhuy975ItLZNywEBoVddQYhZ_Hb0u52&index=2&t=0s
 
 
 
