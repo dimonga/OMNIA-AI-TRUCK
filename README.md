@@ -15,7 +15,8 @@ Website of the Escape room: https://tekoalyrekka.fi/
 The AI learning experience was realized in the form of an Escape Room built inside a truck and it made use of a multitude of different technologies such as HoloLens, Microcontrollers, Raspberry Pi, VR, AR, robotics and more. 
 As the purpose of the project was to educate all diversities of people, having the truck as a platform allowed the learning experience to be made available to all types of people in different locations, and the truck is, in fact, currently touring all around Finland.
 
-The following are the giveaways of this project
+The following are the giveaways of this project:
+
 1.For Non-technical audience
 
 - How a learning experience about AI can be realized in an, i.e. creative, fun, unconventional way
